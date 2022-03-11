@@ -31,13 +31,15 @@ function Tile({ letter }) {
   return (
     <div
       ref={tileRef}
-      className={`${validWord && selected ? 'from-green-500 to-green-300' : ''}
-      ${!validWord && selected ? 'from-red-500 to-red-300' : ''}
-      bg-gradient-to-t from-orange-500 to-orange-300 flex items-center justify-center rounded w-16 h-16`}
+      className={`${!selected ? 'outline outline-[3px] outline-red-500' : ''}
+        bg-gradient-to-t from-orange-500 to-orange-300 flex items-center justify-center rounded-lg overflow-hidden w-16 h-16`}
     >
       <button
         type="button"
-        className="min-w-full min-h-full"
+        className={`${validWord && selected ? 'from-lime-700 to-lime-500' : ''}
+        ${
+          !validWord && selected ? 'from-red-900 to-red-500' : ''
+        } bg-gradient-to-t min-w-full min-h-full`}
         onClick={handleClick}
       >
         <small className="drop-shadow font-bold text-white text-3xl">

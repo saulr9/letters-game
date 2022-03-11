@@ -25,6 +25,5 @@
       "no-unused-vars": "warn",
       "jsx-quotes": "error",
       "react/no-array-index-key": "warn"
-      // "react/jsx-no-constructed-context-values": "off"
     }
 }

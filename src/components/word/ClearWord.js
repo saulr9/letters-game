@@ -12,7 +12,7 @@ function ClearWord({ clearWord }) {
       onClick={handleClick}
     >
       <span className="font-semibold text-[#d8d8d8] mr-2">clear word</span>
-      <CloseIcon cssClasses="font-thin justify-self-end  w-10 h-10" />
+      <CloseIcon cssClasses="font-thin justify-self-end w-10 h-10" />
     </button>
   );
 }

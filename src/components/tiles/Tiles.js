@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 import Tile from './Tile';
 import boardLetters from '../../data/letters';
 
-import './Tiles.module.css';
-
 function Tiles() {
   const [letters, setLetters] = useState([]);
   const { board } = boardLetters;
