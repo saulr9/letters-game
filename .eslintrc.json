@@ -23,6 +23,8 @@
       "no-console": "warn",
       "no-undef": "warn",
       "no-unused-vars": "warn",
-      "jsx-quotes": "error"
+      "jsx-quotes": "error",
+      "react/no-array-index-key": "warn",
+      "react/jsx-no-constructed-context-values": "off"
     }
 }

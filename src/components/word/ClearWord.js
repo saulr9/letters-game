@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ClearWord({ setWord }) {
+function ClearWord({ clearWord }) {
   const handleClick = () => {
-    setWord('');
+    clearWord();
   };
   return (
     <button type="button" onClick={handleClick}>
@@ -12,6 +12,6 @@ function ClearWord({ setWord }) {
   );
 }
 ClearWord.propTypes = {
-  setWord: PropTypes.func.isRequired
+  clearWord: PropTypes.func.isRequired
 };
 export default ClearWord;

@@ -5,26 +5,22 @@ import Tile from './Tile';
 import boardLetters from '../../data/letters';
 import './Tiles.module.css';
 
-function Tiles({ word, setWord }) {
+function Tiles() {
   const [letters, setLetters] = useState([]);
   const { board } = boardLetters;
 
   useEffect(() => {
-    const shuffledBoard = board.sort((a, b) => 0.5 - Math.random());
+    const shuffledBoard = board.sort(() => 0.5 - Math.random());
     setLetters(shuffledBoard);
   }, []);
 
   return (
     <ul>
-      {letters.map((letter) => (
-        <Tile key={letter} letter={letter} setWord={setWord} />
+      {letters.map((letter, index) => (
+        <Tile key={index} letter={letter} />
       ))}
     </ul>
   );
 }
-Tiles.propTypes = {
-  word: PropTypes.string.isRequired,
-  setWord: PropTypes.func.isRequired
-};
 
 export default Tiles;
