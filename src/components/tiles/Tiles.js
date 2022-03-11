@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 import Tile from './Tile';
-
 import boardLetters from '../../data/letters';
+
 import './Tiles.module.css';
 
 function Tiles() {
@@ -15,11 +14,11 @@ function Tiles() {
   }, []);
 
   return (
-    <ul>
+    <div className="grid grid-cols-[repeat(4,_max(64px))] justify-center gap-4">
       {letters.map((letter, index) => (
         <Tile key={index} letter={letter} />
       ))}
-    </ul>
+    </div>
   );
 }
 

@@ -3,9 +3,11 @@ import { GameProvider } from './context/Game';
 
 function App() {
   return (
-    <GameProvider>
-      <Game />
-    </GameProvider>
+    <div className="container grid items-center justify-center mx-auto min-h-screen">
+      <GameProvider>
+        <Game />
+      </GameProvider>
+    </div>
   );
 }
 

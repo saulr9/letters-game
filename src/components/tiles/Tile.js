@@ -1,11 +1,10 @@
-import React, { useState, useContext, useEffect, useRef } from 'react';
+import { useState, useContext, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { GameContext } from '../../context/Game';
-import styles from './Tile.module.css';
 
 function Tile({ letter }) {
   const [selected, setSelected] = useState(false);
-  const { word, setWord } = useContext(GameContext);
+  const { word, setWord, validWord } = useContext(GameContext);
   const tileRef = useRef();
 
   useEffect(() => {
@@ -15,7 +14,7 @@ function Tile({ letter }) {
   }, [word]);
 
   useEffect(() => {
-    console.log(letter, tileRef.current.getBoundingClientRect());
+    // console.log(letter, tileRef.current.getBoundingClientRect());
   }, [selected]);
 
   const handleClick = () => {
@@ -30,11 +29,22 @@ function Tile({ letter }) {
   };
 
   return (
-    <li ref={tileRef} className={selected ? styles.selected : ''}>
-      <button type="button" onClick={handleClick}>
-        {letter}
+    <div
+      ref={tileRef}
+      className={`${validWord && selected ? 'from-green-500 to-green-300' : ''}
+      ${!validWord && selected ? 'from-red-500 to-red-300' : ''}
+      bg-gradient-to-t from-orange-500 to-orange-300 flex items-center justify-center rounded w-16 h-16`}
+    >
+      <button
+        type="button"
+        className="min-w-full min-h-full"
+        onClick={handleClick}
+      >
+        <small className="drop-shadow font-bold text-white text-3xl">
+          {letter}
+        </small>
       </button>
-    </li>
+    </div>
   );
 }
 
