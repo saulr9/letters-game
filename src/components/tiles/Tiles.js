@@ -14,7 +14,7 @@ function Tiles() {
   return (
     <div className="grid grid-cols-[repeat(4,_max(64px))] justify-center gap-4">
       {letters.map((letter, index) => (
-        <Tile key={index} letter={letter} />
+        <Tile key={index} letter={letter} id={index} />
       ))}
     </div>
   );

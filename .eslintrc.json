@@ -24,6 +24,7 @@
       "no-undef": "warn",
       "no-unused-vars": "warn",
       "jsx-quotes": "error",
-      "react/no-array-index-key": "warn"
+      "react/no-array-index-key": "off",
+      "no-continue": "off"
     }
 }

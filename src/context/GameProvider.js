@@ -9,14 +9,16 @@ import PropTypes from 'prop-types';
 import dictionary from '../data/dictionary';
 
 const GameContext = createContext();
+
 function GameProvider({ children }) {
   const [word, setWord] = useState('');
   const [validWord, setValidWord] = useState(false);
-  const [neighborsTiles, setNeighborsTiles] = useState([]);
+  const [neighborsTile, setNeighborsTile] = useState([]);
   const { words } = dictionary;
 
   const clearWord = useCallback(() => {
     setWord('');
+    setNeighborsTile([]);
   }, [word]);
 
   useEffect(() => {
@@ -30,8 +32,8 @@ function GameProvider({ children }) {
       clearWord,
       word,
       setWord,
-      neighborsTiles,
-      setNeighborsTiles,
+      neighborsTile,
+      setNeighborsTile,
       validWord,
       setValidWord
     }),

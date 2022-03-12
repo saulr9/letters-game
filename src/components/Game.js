@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import Tiles from './tiles/Tiles';
 import Word from './word/Word';
 import ClearWord from './word/ClearWord';
-import { GameContext } from '../context/Game';
+import { GameContext } from '../context/GameProvider';
 import useIsMobile from '../hooks/useIsMobile';
 
 function Game() {

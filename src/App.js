@@ -1,5 +1,5 @@
 import Game from './components/Game';
-import { GameProvider } from './context/Game';
+import { GameProvider } from './context/GameProvider';
 
 function App() {
   return (
