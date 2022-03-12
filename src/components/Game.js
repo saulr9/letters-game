@@ -10,7 +10,7 @@ function Game() {
   const isMobile = useIsMobile();
 
   return (
-    <div className="grid md:grid-cols-2 md:gap-6 min-h-screen md:min-h-fit py-4">
+    <div className="grid sm:grid-cols-2 md:gap-6 min-h-screen sm:min-h-fit py-4">
       <div className="grid">
         {isMobile && <ClearWord clearWord={clearWord} />}
         <Tiles />
