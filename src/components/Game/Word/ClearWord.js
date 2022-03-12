@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
-import CloseIcon from '../UI/CloseIcon';
+import CloseIcon from '../../UI/CloseIcon';
 
-function ClearWord({ clearWord }) {
+function ClearWord({ word, clearWord }) {
   const handleClick = () => {
     clearWord();
   };
   return (
     <button
       type="button"
+      disabled={!word}
       className="grid grid-cols-[1fr_max(48px)] self-start justify-self-end items-center justify-end"
       onClick={handleClick}
     >
@@ -17,6 +18,7 @@ function ClearWord({ clearWord }) {
   );
 }
 ClearWord.propTypes = {
-  clearWord: PropTypes.func.isRequired
+  clearWord: PropTypes.func.isRequired,
+  word: PropTypes.string.isRequired
 };
 export default ClearWord;

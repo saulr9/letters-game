@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import useTile from '../../hooks/useTile';
+import useTile from '../../../hooks/useTile';
 
 function Tile({ letter, id }) {
   const {

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { GameContext } from '../../context/GameProvider';
+import { GameContext } from '../../../context/GameProvider';
 
 function Word({ word }) {
   const { validWord } = useContext(GameContext);
